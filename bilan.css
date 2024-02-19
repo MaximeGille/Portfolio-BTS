@@ -1,0 +1,123 @@
+/* Polices */
+@font-face{
+    font-family: 'minecraft';
+    src: url("Polices/Minecraftia-Regular.ttf");
+}
+
+
+
+body,html{width:100%;height:100%;margin:0;padding:0;}
+
+#fond{
+    background-image:url(images/Plan_de_travail_1.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+}
+
+#fond>h1{
+    color: white;
+    font-family: "minecraft";
+    font-size: 40px;
+    position: absolute;
+    text-align: center;
+    top:15%;
+}
+
+#fond2{ 
+    width:100%;
+    height:100%;
+}
+
+#main-ecran{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-ecran::before{
+    content:"";
+    width: 20%;
+    height: 70%;
+    position: absolute;
+    z-index: 2;
+    left:40%;
+    bottom:0;
+    background-color: black;
+}
+
+#ecran{
+    z-index: 5;
+    width:85%;
+    height:85%;
+    border-radius: 100px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#ecran>h1{
+    color:white;
+    margin: 0;
+    font-family: 'minecraft';
+    font-size: 30px;
+}
+
+#inte-ecran{
+    background-image:url("images/ecranbackground.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width:90%;
+    height:80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ecran-icon{
+    width: 300px;
+    height:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ecran-icon img{
+    width:50%;
+    height:auto;
+}
+
+.ecran-icon h3{
+    padding: 20px;
+    font-family: 'minecraft';
+    line-height: 1.2em;
+    text-align: center;
+    color:rgb(255, 255, 255);
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#quitter{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width:100px;
+    height:100px;
+}
+
+#quitter img{
+    width:100%;
+    height:100%;
+}
