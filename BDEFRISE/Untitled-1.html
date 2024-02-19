@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from maximegille.fr/BDEFRISE/Untitled-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 19 Feb 2024 16:20:14 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDE</title>
+    <link rel="stylesheet" href="BDE.css">
+</head>
+<body>
+    <img src="a.jpg" usemap="#image-map">
+
+    <map name="image-map">
+        <area coords="1189,897,1808,1437" shape="rect" onclick="pop('non',t1,'j')"> <!--1 Pas D'images-->
+        <area coords="95,1252,716,1771,1284,985" shape="rect" onclick="pop('une',t2,'j','rocket1.html')"> <!--2-->
+        <area coords="1167,1491,1845,1830" shape="rect" onclick="pop('une',t3,'j','valentinder.html')"> <!--3-->
+        <area coords="76,1842,780,2295" shape="rect" onclick="pop('plus',t4,'j','img1','lol1.html')"> <!--4 Plusieurs-->
+        <area coords="102,2431,784,2948" shape="rect" onclick="pop('une',t5,'r','integration.html')"> <!--5-->
+        <area coords="1126,2666,1881,3112" shape="rect" onclick="pop('plus',t6,'r','img2','hallow1.html')"> <!--6-->
+        <area coords="92,3045,741,3759" shape="rect" onclick="pop('une',t7,'r','ow.html')"> <!--7-->
+        <area coords="1116,3326,1840,3832" shape="rect" onclick="pop('plus',t8,'r','img3','valo.html')"> <!--8 Plusieurs-->
+        <area coords="93,3811,741,4410" shape="rect" onclick="pop('une',t9,'r','ski.html')"> <!--9-->
+    </map>
+	<div id="exit" onclick="window.location.href = '../Bilan.html'"><h1>x</h1></div>
+</body>
+<script>
+
+img1 = ["lol1.png","braw.html",'rocket2.png'];
+img2 = ["hallow1.png","hallow2.png"];
+img3 = ["valo.png","multivs.html","rocket3.html","lol2.png"];
+
+t1 = ["Journée HallowNight","- Relationnel <br>- Gestion de foule <br>- Travail d’équipe"];
+t2 = ["Tournois Rocket League ","- Organisation d’événement <br>- Travailler en mode projet"];
+t3 = ["Valentinders","- Relationnel<br>- Gestion de foule <br>- Travail d’équipe"];
+t4 = ["Tournois Divers ","- Organisation d’événement<br>-Travailler en mode projet<br>- Travail d’équipe"];
+t5 = ["Journée d’intégration ","- Relationnel<br>- Gestion de foule<br>- Travail d’équipe<br>- Gestion de jeux"];
+t6 = ["Retour Hallow-Night","- Relationnel <br>- Gestion de foule <br>- Travail d’équipe"];
+t7 = ["Tournois Overwatch","-     Organisation d’événement <br>- Travailler en mode projet<br>- Gestion arbres de tournois de 45 joueurs"];
+t8 = ["Organisation divers tournois","- Organisation d’événement<br>- Travailler en mode projet<br>- Travail d’équipe"];
+t9 = ["Ski risoul","- Organisation d’évement sur 1 semaine<br>- Travail d’équipe<br>- Gestion de foule"];
+
+act = 0;
+
+function pop(x,p,y,z,a){
+    switch(x){
+        case "une":
+            document.body.innerHTML+=`<div id="popup">
+        <div id="${y}-main-pop">
+            <div id="exit" onclick="exit()"><h1>x</h1></div>
+            <img id='img-pop' src="bde/${z}">
+            <div id="txt-pop">
+                <h1 class="unselectable">${p[0]}</h1>
+                <h2 class="unselectable">${p[1]}</h2>
+            </div>
+        </div>
+        </div>`;
+        break;
+        case "non":
+        document.body.innerHTML+=`<div id="popup">
+        <div id="${y}-main-pop">
+            <div id="exit" onclick="exit()"><h1>x</h1></div>
+            <div id="txt-pop">
+                <h1 class="unselectable">${p[0]}</h1>
+                <h2 class="unselectable">${p[1]}</h2>
+            </div>
+        </div>
+        </div>`;
+        break;
+        case "plus":
+        document.body.innerHTML+=`
+        <div id="popup">
+            <div id="${y}-main-pop">
+                <div id="exit" onclick="exit()"><h1>x</h1></div>
+                <div id="sld-pop">
+                 <div id="g" onclick='prev(${z})'><h1 class="unselectable"><</h1></div>
+                    <img id='img-sld-pop' src="bde/${a}">
+                 <div id="d" onclick='next(${z})'><h1 class="unselectable">></h1></div>
+                </div>
+            <div id="txt-pop">
+                <h1 class="unselectable">${p[0]}</h1>
+                <h2 class="unselectable">${p[1]}</h2>
+            </div>
+        </div>
+    </div>`;
+    break;
+    }
+}
+
+function exit(){
+    document.getElementById("popup").remove();
+}
+
+function prev(x){
+    act--;
+    if (act < 0){
+        act = x.length - 1;
+    } else if (act > x.length - 1){
+        act = 0
+    }
+    document.getElementById("img-sld-pop").src = "bde/"+x[act];
+}
+
+function next(x){
+    act++;
+    if (act < 0){
+        act = x.length - 1;
+    } else if (act > x.length - 1){
+        act = 0
+    }
+    document.getElementById("img-sld-pop").src = "bde/"+x[act];
+}
+
+</script>
+
+<!-- Mirrored from maximegille.fr/BDEFRISE/Untitled-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 19 Feb 2024 16:20:17 GMT -->
+</html>

@@ -1,0 +1,137 @@
+@font-face {
+    font-family: "x";
+    src: url(HKGrotesk-Light.otf);
+}
+@font-face {
+    font-family: "xb";
+    src: url(HKGrotesk-Bold.otf);
+}
+
+html, body{
+    width:100%;
+    height: 100%;
+    margin:0;
+}
+
+img{
+    width: 100%;
+}
+
+#popup{
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#j-main-pop{
+    height: 80%;
+    width:70%;
+    background: linear-gradient(130deg, rgba(37,49,64,1) 85%, rgba(255,217,59,1) 100%);
+    color:white;
+    font-family: "x";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#r-main-pop{
+    height: 80%;
+    width:70%;
+    background: linear-gradient(135deg, rgba(37,49,64,1) 80%, rgba(255,22,22,1) 100%);
+    color:white;
+    font-family: "x";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#txt-pop,#img-pop,#img-sld-pop{
+    width:50%;
+    height:100%;
+    text-align: center;
+}
+
+#txt-pop h1{
+    font-family: "xb";
+}
+
+#exit{
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    margin:0;
+    right: 0;
+    text-align: center;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#exit h1{
+    font-size: 25px;
+    margin:0;
+}
+
+#sld-pop{
+    width: 50%;
+    height:100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#sld-pop h1{
+    text-align: center;
+}
+
+#sld-pop div{
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    top:0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sld-pop div:hover{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#sld-pop img{
+    width: 100%;
+    height: 100%;
+}
+
+#g{
+    left:0;
+}
+
+#d{
+    right:0;
+}
